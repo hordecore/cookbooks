@@ -45,7 +45,7 @@ ssh() {
 		fi
 
 		sed -E 's/.*(UseDNS|GSSAPIAuthentication).*/\1 no/g' -i /etc/ssh/sshd_config
-		systemctl restart sshd
+		systemctl restart sshd || service sshd reload
 	fi
 }
 
