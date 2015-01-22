@@ -11,7 +11,7 @@ _EPEL="http://mirror.yandex.ru/centos/7.0.1406/extras/x86_64/Packages/epel-relea
 _VAGRANT="https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.rpm"
 _VIMRC="https://raw.githubusercontent.com/hordecore/vimrc/master/.vimrc"
 read x x version x < /etc/issue
-[ "${version//./}" -lt 70 ] && "_EPEL=http://mirror.yandex.ru/centos/6.6/extras/x86_64/Packages/epel-release-6-8.noarch.rpm"
+[ "${version//./}" -lt 70 ] && _EPEL="http://mirror.yandex.ru/centos/6.6/extras/x86_64/Packages/epel-release-6-8.noarch.rpm"
 
 epel() {
 	if [ "$EPEL" = 1 ]; then
