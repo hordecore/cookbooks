@@ -24,7 +24,7 @@ vim() {
 		[ -f ~/.vimrc ] && return 0
 		echo "# VIM"
 		mkdir -p ~/.vim/swapfiles
-		wget "$_VIMRC" -O ~/.vimrc
+		wget --no-check-certificate "$_VIMRC" -O ~/.vimrc
 	fi
 }
 
